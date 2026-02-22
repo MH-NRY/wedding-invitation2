@@ -5,6 +5,10 @@
 /* TYPOGRAPHY SCALE */
 /* ============================= */
 
+html, body {
+    overflow-x: hidden;
+}
+
 :root {
     --h1: clamp(2.8rem, 5vw, 4.5rem);
     --h2: clamp(2rem, 4vw, 3rem);
@@ -33,7 +37,7 @@ img {
 /* HERO */
 /* ============================= */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     background: url("images/hero.png") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -701,6 +705,35 @@ section {
     }
 
     .sponsor-column {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .time-box {
+        flex: 1 1 40%;
+        text-align: center;
+    }
+
+    .time-box span {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+
+    .time-box small {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    /* RSVP image fix */
+    .rsvp img {
         width: 100%;
     }
 }
